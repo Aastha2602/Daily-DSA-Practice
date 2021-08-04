@@ -1,2 +1,2 @@
 # Leetcoding
-Letcode questions
+Leetcode questions along with my submissions.
