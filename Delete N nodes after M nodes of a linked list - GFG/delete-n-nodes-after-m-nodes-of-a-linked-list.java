@@ -100,6 +100,9 @@ class Solution
     {
         // your code here
         
+        // current waale elements ko rakhna hai aur temp waale se start karke 
+        // N tak jana hai aur fir temp to temp+N tak delete honge 
+        
         Node current=head,temp;
         while(current!=null){
             for(int i=1;i<M && current!=null;i++){
