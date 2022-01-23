@@ -16,3 +16,7 @@ class Solution {
         return maxSqLen*maxSqLen;
     }
 }
+
+// dp[i][j] represents the side length of maximum square whose bottom right corner is at i & j....
+
+// that is at this i,j the square ends
