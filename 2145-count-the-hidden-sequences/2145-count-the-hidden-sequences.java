@@ -15,7 +15,8 @@ class Solution {
 
 
 /*
+  +(1)      +(-3)    +(4)
+a      a+1     a+2         a-2
 
-
-
+determine the upperBound(max) & lowerBound(min) and counted all the elements that are in the range of ( [upper,lower] intersection [max,min] )
 */
