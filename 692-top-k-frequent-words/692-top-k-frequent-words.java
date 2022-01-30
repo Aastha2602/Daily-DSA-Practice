@@ -21,7 +21,7 @@ class Solution {
 
         ArrayList<String> list=new ArrayList<>();
         while(pq.size()>0){
-            list.add(0,pq.poll().getKey());
+            list.add(0,pq.poll().getKey()); // 0 for lexicographic order
         }
         return list;
     }
