@@ -2,6 +2,8 @@ class Solution {
     public int[] kWeakestRows(int[][] mat, int k) {
         
         int[] ans=new int[k];
+        
+        // if number of soldiers are  different, sort on basis of soldiers else sort on basis of row-number
         PriorityQueue<int[]> pq=new PriorityQueue<>((a,b) -> a[0]!=b[0] ? b[0]-a[0] : b[1]-a[1] );
         for(int i=0;i<mat.length;i++){
             int soldier=0;
