@@ -22,7 +22,8 @@ class Solution {
             }
             current = current.next;
         }
-        prev.next = current;
+        prev.next = null;
         return head;
     }
 }
+// prev is building a new linkedlist here
