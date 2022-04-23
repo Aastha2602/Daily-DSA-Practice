@@ -21,3 +21,9 @@ class Solution {
         return ans;
     }
 }
+
+// set: 1 2 -> 1  
+// list: 2
+    
+// set: 4 9 5 -> 4 5 -> 5 
+// list: 9 4 
