@@ -1,4 +1,7 @@
 class Solution {
+    
+    // similar to lcs
+    
     public int maxUncrossedLines(int[] nums1, int[] nums2) {
         int N = nums1.length , M = nums2.length;
         int[][] dp = new int[N+1][M+1];
