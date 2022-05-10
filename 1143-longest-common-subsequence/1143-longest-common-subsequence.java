@@ -5,7 +5,7 @@ class Solution {
             return dp[n][m] = 0;
         }
         
-        if(dp[n][m] != 0){
+        if(dp[n][m] != -1){
             return dp[n][m];
         }
         
@@ -23,6 +23,9 @@ class Solution {
     public int longestCommonSubsequence(String text1, String text2) {
         int n = text1.length(), m = text2.length();
         int[][] dp = new int[n+1][m+1];
+        for(int[] d:dp){
+            Arrays.fill(d,-1);
+        }
         return longestCommonSubsequence_memo(text1,text2,n,m,dp);
     }
 }
