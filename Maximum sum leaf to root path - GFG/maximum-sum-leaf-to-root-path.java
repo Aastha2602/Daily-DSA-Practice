@@ -114,11 +114,27 @@ class Solution
 {
     public static int maxPathSum(Node root)
     {
-        //code here
-        if(root == null){
-            return 0;
-        }
+        //code here   
         
-        return Math.max(root.data +maxPathSum(root.left), root.data + maxPathSum(root.right));
+        
+        // -10 
+        //   -20 
+        //       -30
+        
+        // if(root == null){
+        //     return 0;
+        // }
+        
+        // return Math.max(root.data +maxPathSum(root.left), root.data + maxPathSum(root.right));
+    
+        if(root.left!=null && root.right != null){
+            return root.data + Math.max(maxPathSum(root.left),maxPathSum(root.right));
+        }else if(root.left!=null){
+            return root.data + maxPathSum(root.left);
+        }else if(root.right!=null){
+            return root.data + maxPathSum(root.right);
+        }else{
+            return root.data;
+        }
     }
 }
