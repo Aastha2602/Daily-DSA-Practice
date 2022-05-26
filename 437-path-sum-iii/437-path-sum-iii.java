@@ -14,7 +14,7 @@
  * }
  */
 class Solution {
-    int count = 0;
+    // int count = 0;
     public int pathSum(TreeNode root, int targetSum) {
         if(root == null){
             return 0;
@@ -22,14 +22,15 @@ class Solution {
         
         HashMap<Integer,Integer> map = new HashMap<>();
         map.put(0,1);
-        helper(root, root.val, targetSum, map);
-        return count;
+        return helper(root, root.val, targetSum, map);
+        // return count;
     }
     
-    public void helper(TreeNode node, int psum, int target, HashMap<Integer,Integer> map){
+    public int helper(TreeNode node, int psum, int target, HashMap<Integer,Integer> map){
         
+        int ans = 0;
         if(map.containsKey(psum-target)){
-            count += map.get(psum-target);
+            ans += map.get(psum-target);
         }
         
         if(map.containsKey(psum) == false ){
@@ -39,11 +40,13 @@ class Solution {
         }
         
         if(node.left != null){
-            helper(node.left, psum+node.left.val, target, map);
+            int left = helper(node.left, psum+node.left.val, target, map);
+            ans += left;
         }
         
         if(node.right != null){
-            helper(node.right, psum+node.right.val, target, map);
+            int right = helper(node.right, psum+node.right.val, target, map);
+            ans += right;
         }
         
         // calls
@@ -53,7 +56,6 @@ class Solution {
             map.put(psum,map.get(psum)-1);
         }
         
-        
-        
+        return ans;
     }
 }
