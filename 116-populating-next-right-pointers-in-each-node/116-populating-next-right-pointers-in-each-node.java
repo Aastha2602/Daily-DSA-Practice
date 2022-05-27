@@ -23,6 +23,9 @@ class Node {
 
 class Solution {
     public Node connect(Node root) {
+        // O(N)
+        // p1 is for all levels
+        // p2 is iterating on all nodes of individual levels
         Node p1 = root;
         while(p1 != null){
             Node p2  = p1;
