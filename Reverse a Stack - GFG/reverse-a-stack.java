@@ -44,15 +44,19 @@ class GFG
 
 //User function Template for Java
 
-class Solution
-{ 
-    static ArrayList<Integer> reverse(Stack<Integer> s)
-    {
+class Solution{ 
+    static ArrayList<Integer> reverse(Stack<Integer> s){
         // add your code here
         ArrayList<Integer> list = new ArrayList<>();
-        while(!s.isEmpty()){
-            list.add(s.pop());
-        }
+        reverseStack(s, list);
         return list;
+    }
+    static void reverseStack(Stack<Integer> s, ArrayList<Integer> list){
+        if(s.isEmpty()){
+            return;
+        }
+        
+        list.add(s.pop());
+        reverseStack(s, list);
     }
 }
