@@ -1,6 +1,6 @@
 class Solution {
     
-    // only 0 (empty string) , 1 (perfect palindrome) , 2 ( as only a & b are present so highest answer is to remove all a's and then all b's  ) are possible answers
+    // only 0 (empty string) , 1 (perfect palindrome) , 2 ( when not perfect palindrome and as only a & b are present so highest answer is to remove all a's and then all b's  ) are possible answers
     
     public int removePalindromeSub(String s) {
         if(s.length() == 0 ){
