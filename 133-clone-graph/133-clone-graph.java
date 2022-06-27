@@ -38,6 +38,8 @@ class Solution {
                     map.put(neighbor, new Node(neighbor.val, new ArrayList<>()));
                     qu.add(neighbor);
                 }
+                
+                // create edge b/w curr and neighbor in the cloned graph
                 map.get(curr).neighbors.add(map.get(neighbor));
             }
         }
