@@ -58,7 +58,7 @@ class Solution {
             parent[y] = x;
         }else{
             parent[x] = y;
-            rank[y]++;
+            rank[x]++;
         }
     }
     
