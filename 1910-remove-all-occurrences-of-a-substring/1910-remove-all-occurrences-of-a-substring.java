@@ -1,3 +1,12 @@
+// The idea is for every character is :
+
+// 1) First, we push it into a stack
+
+// 2) If the last character is the same as the last character in the pattern, we might have a the pattern in the stack
+
+// 3) Popping out all the character equals to the length of the pattern so that we can compare
+// 4) If it's a false positive, then we put the char back to stack
+
 class Solution {
     public String removeOccurrences(String s, String part) {
         Stack<Character> st = new Stack<>();
@@ -19,6 +28,7 @@ class Solution {
                     }
                 }
             }
+            
         }
         
         StringBuilder res = new StringBuilder();
