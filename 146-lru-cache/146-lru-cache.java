@@ -1,7 +1,7 @@
 // head -- mru element -- other elements -- lru element -- tail
 
 // we insert everything to the right after head 
-// lru is the element right before the tail 
+// lru is the element just before the tail 
 
 // hashmap will contain key along with the address of that node
 
