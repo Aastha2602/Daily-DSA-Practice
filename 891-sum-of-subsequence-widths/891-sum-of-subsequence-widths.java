@@ -1,5 +1,6 @@
 
-
+// observe the pattern -> subtract all 2^powers from end & add all 2^powers from starting simultaneously
+// powers ranging from [0... n]
 
 class Solution {
     public int sumSubseqWidths(int[] nums) {
